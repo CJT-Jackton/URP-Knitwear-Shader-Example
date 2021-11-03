@@ -112,6 +112,8 @@ half3 SampleKnitwear(float2 uv, float2 dpdx, float2 dpdy)
 
 inline void InitializeKnitwearLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)
 {
+    
+	ZERO_INITIALIZE(SurfaceData, outSurfaceData); 
     float2 texCoord = uv;
 
     float2 dtdx = ddx(uv);
